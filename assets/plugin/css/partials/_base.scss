@@ -1,9 +1,10 @@
 .cookbook-hook-guide {
-	border: 1px solid #2dbdb6;
+	border: 1px solid $teal;
+	font-family: Consolas, Monaco, 'Andale Mono', 'DejaVu Sans Mono', monospace;
 	padding: 15px;
 
 	.cookbook-hook-name {
-		color: #2dbdb6;
+		color: $teal;
 	}
 
 	.cookbook-hook-callbacks {
@@ -11,7 +12,7 @@
 		padding: 10px;
 
 		li {
-			background: lighten( #2dbdb6, 40 );
+			background: lighten( $teal, 40 );
 			list-style-type: none;
 			margin-bottom: 5px;
 			padding: 5px;
