@@ -11,6 +11,6 @@ __License:__ [MIT](http://wpsitecare.mit-license.org/)
 
 Cookbook Hook Guide is a visual tool for revealing the available hooks within the Cookbook WordPress plugin.
 
-![Recipe View](https://cloud.githubusercontent.com/assets/2184093/22850353/f1457a1e-efd5-11e6-875a-0697487f00e7.jpg)
+![Recipe View](https://cloud.githubusercontent.com/assets/2184093/22850525/a6b576b8-efd8-11e6-9d5e-ee44809360d3.jpg)
 
-![Print view](https://cloud.githubusercontent.com/assets/2184093/22850352/f02c3104-efd5-11e6-8a67-4366f6d56491.jpg)
+![Print view](https://cloud.githubusercontent.com/assets/2184093/22850526/a6c62c60-efd8-11e6-8756-1bb608075cdf.jpg)
