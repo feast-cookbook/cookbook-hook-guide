@@ -12,10 +12,17 @@
 		padding: 10px;
 
 		li {
-			background: lighten( $teal, 40 );
+			background: transparentize( $teal, 0.8 );
+			display: block;
 			list-style-type: none;
 			margin-bottom: 5px;
 			padding: 5px;
+			position: relative;
+			z-index: 9999;
+		}
+
+		.priority {
+			float: right;
 		}
 	}
 }

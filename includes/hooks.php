@@ -56,10 +56,11 @@ function cookbook_hook_guide_hook_info() {
 		<?php if ( ! empty( $callbacks ) ): ?>
 
 			<ul class="cookbook-hook-callbacks">
-				<?php foreach ( $callbacks as $key => $args ) : ?>
+				<?php foreach ( $callbacks as $priority => $args ) : ?>
 					<?php foreach ( $args as $callback => $args ) : ?>
 						<li>
-							<?php echo $args['function']; ?>
+							<span class="function"><?php echo $args['function']; ?></span> <span class="priority"><?php echo $priority; ?></span>
+
 						</li>
 					<?php endforeach; ?>
 				<?php endforeach; ?>

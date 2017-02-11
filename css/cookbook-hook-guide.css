@@ -20,9 +20,16 @@
 }
 
 .cookbook-hook-guide .cookbook-hook-callbacks li {
-  background: #c5f1ef;
+  background: rgba(45, 189, 182, 0.2);
+  display: block;
   list-style-type: none;
   margin-bottom: 5px;
   padding: 5px;
+  position: relative;
+  z-index: 9999;
+}
+
+.cookbook-hook-guide .cookbook-hook-callbacks .priority {
+  float: right;
 }
 /*# sourceMappingURL=cookbook-hook-guide.css.map */
