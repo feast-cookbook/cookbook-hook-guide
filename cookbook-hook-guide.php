@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Cookbook Hook Guide
  * Plugin URI:  https://cookbookplugin.com
- * Description: The best hook guide for the best recipe plugin for WordPress.
+ * Description: The simplest visual hook guide for the simplest WordPress recipe plugin.
  * Version:     1.0.0
  * Author:      Cookbook
  * Author URI:  https://cookbookplugin.com

@@ -7,7 +7,7 @@ Tested up to: 4.7
 Stable tag: 1.0.0
 License: MIT
 
-Cookbook Hook Guide is an example of a plugin.
+The simplest visual hook guide for the simplest WordPress recipe plugin.
 
 == Description ==
 
