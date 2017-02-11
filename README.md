@@ -2,8 +2,8 @@
 
 The simplest visual hook guide for the simplest WordPress recipe plugin.
 
-__Contributors:__ [Robert Neu](https://github.com/robneu)  
-__Requires:__ WordPress 4.7  
+__Contributors:__ [Robert Neu](https://github.com/robneu), [Matt Zak](https://github.com/mzak)  
+__Requires:__ WordPress 4.4  
 __Tested up to:__ WordPress 4.7  
 __License:__ [MIT](http://wpsitecare.mit-license.org/)  
 
