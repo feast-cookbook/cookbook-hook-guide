@@ -78,6 +78,13 @@ add_action( 'cookbook_recipe_print_head', 'cookbook_hook_guide_hook_info' );
  *
  * @see cookbook_hook_guide_hook_info
  */
+add_action( 'cookbook_recipe_print_before', 'cookbook_hook_guide_hook_info' );
+
+/**
+ * Callback defined in includes/hooks.php
+ *
+ * @see cookbook_hook_guide_hook_info
+ */
 add_action( 'cookbook_recipe_print_top', 'cookbook_hook_guide_hook_info' );
 
 /**
@@ -92,7 +99,7 @@ add_action( 'cookbook_recipe_print_content', 'cookbook_hook_guide_hook_info' );
  *
  * @see cookbook_hook_guide_hook_info
  */
-add_action( 'cookbook_recipe_print_bottom', 'cookbook_hook_guide_hook_info', 4 );
+add_action( 'cookbook_recipe_print_bottom', 'cookbook_hook_guide_hook_info' );
 
 /**
  * Callback defined in includes/hooks.php
