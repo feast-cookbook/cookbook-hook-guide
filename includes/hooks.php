@@ -20,11 +20,21 @@
 function cookbook_hook_guide_get_callbacks( $hook, $unset = false ) {
 	global $wp_filter;
 
-	$callbacks = $wp_filter[ $hook ]->callbacks;
+	if ( ! isset( $wp_filter[ $hook ] ) ) {
+		return array();
+	}
+
+	$callbacks = $wp_filter[ $hook ];
+
+	// WordPress 4.7 Changed this to an instance of the WP_Hook object.
+	if ( $callbacks instanceof WP_Hook ) {
+		$callbacks = $callbacks->callbacks;
+	}
 
 	if ( $unset ) {
 		foreach ( $callbacks as $priority => $groups ) {
 			unset( $groups[ $unset ] );
+
 			$callbacks[ $priority ] = $groups;
 
 			if ( empty( $callbacks[ $priority ] ) ) {
