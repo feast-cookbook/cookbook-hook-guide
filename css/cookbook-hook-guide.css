@@ -1,0 +1,27 @@
+/**!
+ * Plugin Name: Cookbook Hook Guide
+ * Version:     1.0.0
+ * Author:      WP Site Care
+ * License:     MIT
+ */
+.cookbook-hook-guide {
+  border: 1px solid #2dbdb6;
+  padding: 15px;
+}
+
+.cookbook-hook-guide .cookbook-hook-name {
+  color: #2dbdb6;
+}
+
+.cookbook-hook-guide .cookbook-hook-callbacks {
+  margin: 0;
+  padding: 10px;
+}
+
+.cookbook-hook-guide .cookbook-hook-callbacks li {
+  background: #c5f1ef;
+  list-style-type: none;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+/*# sourceMappingURL=cookbook-hook-guide.css.map */

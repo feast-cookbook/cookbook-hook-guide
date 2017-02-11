@@ -1,0 +1,20 @@
+.cookbook-hook-guide {
+	border: 1px solid #2dbdb6;
+	padding: 15px;
+
+	.cookbook-hook-name {
+		color: #2dbdb6;
+	}
+
+	.cookbook-hook-callbacks {
+		margin: 0;
+		padding: 10px;
+
+		li {
+			background: lighten( #2dbdb6, 40 );
+			list-style-type: none;
+			margin-bottom: 5px;
+			padding: 5px;
+		}
+	}
+}
