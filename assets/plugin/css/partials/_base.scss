@@ -1,3 +1,14 @@
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
 .cookbook-hook {
 	background: $white;
 	border: 1px solid $teal;
@@ -50,7 +61,7 @@
 
 		&:hover,
 		&:focus {
-			display: block;
+			@extend %unhide;
 		}
 
 		.out {
@@ -65,7 +76,7 @@
 	.callback:hover,
 	.callback:focus {
 		.cookbook-hook-example-code {
-			display: block;
+			@extend %unhide;
 		}
 	}
 }
@@ -81,7 +92,7 @@
 		&:hover,
 		&:focus {
 			.cookbook-hook-example-code {
-				display: block;
+				@extend %unhide;
 			}
 		}
 	}
@@ -96,6 +107,11 @@
 			}
 		}
 	}
+}
+
+%unhide {
+	animation: fadeIn 0.5s;
+	display: block;
 }
 
 .cookbook-recipe-top-hook {

@@ -4,6 +4,23 @@
  * Author:      WP Site Care
  * License:     MIT
  */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .cookbook-hook {
   background: #fff;
   border: 1px solid #2dbdb6;
@@ -56,21 +73,12 @@
   z-index: 1000;
 }
 
-.cookbook-hook .cookbook-hook-example-code:hover, .cookbook-hook .cookbook-hook-example-code:focus {
-  display: block;
-}
-
 .cookbook-hook .cookbook-hook-example-code .out {
   color: #fff;
 }
 
 .cookbook-hook .cookbook-hook-example-code .num {
   color: #f7b346;
-}
-
-.cookbook-hook .callback:hover .cookbook-hook-example-code,
-.cookbook-hook .callback:focus .cookbook-hook-example-code {
-  display: block;
 }
 
 .cookbook-nested-hook {
@@ -83,10 +91,6 @@
   position: relative;
 }
 
-.cookbook-nested-hook .cookbook-hook-name:hover .cookbook-hook-example-code, .cookbook-nested-hook .cookbook-hook-name:focus .cookbook-hook-example-code {
-  display: block;
-}
-
 .cookbook-nested-hook .cookbook-nested-hook-callbacks {
   margin: 10px;
   padding: 0;
@@ -94,6 +98,13 @@
 
 .cookbook-nested-hook .cookbook-nested-hook-callbacks li:last-of-type {
   margin-bottom: 0;
+}
+
+.cookbook-hook .cookbook-hook-example-code:hover, .cookbook-hook .cookbook-hook-example-code:focus, .cookbook-hook .callback:hover .cookbook-hook-example-code,
+.cookbook-hook .callback:focus .cookbook-hook-example-code, .cookbook-nested-hook .cookbook-hook-name:hover .cookbook-hook-example-code, .cookbook-nested-hook .cookbook-hook-name:focus .cookbook-hook-example-code {
+  -webkit-animation: fadeIn 0.5s;
+          animation: fadeIn 0.5s;
+  display: block;
 }
 
 .cookbook-recipe-top-hook {
