@@ -20,13 +20,6 @@ add_action( 'wp_enqueue_scripts', 'cookbook_hook_guide_load_css', 20 );
 /**
  * Callback defined in includes/scripts.php
  *
- * @see cookbook_hook_guide_load_js
- */
-add_action( 'wp_enqueue_scripts', 'cookbook_hook_guide_load_js', 20 );
-
-/**
- * Callback defined in includes/scripts.php
- *
  * @see cookbook_hook_guide_output_print_styles
  */
 add_action( 'cookbook_recipe_print_head', 'cookbook_hook_guide_output_print_styles' );
