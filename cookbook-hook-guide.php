@@ -49,7 +49,6 @@ define( 'COOKBOOK_HOOK_GUIDE_DIR', plugin_dir_path( __FILE__ ) );
  */
 define( 'COOKBOOK_HOOK_GUIDE_URI', plugin_dir_url( __FILE__ ) );
 
-require_once COOKBOOK_HOOK_GUIDE_DIR . 'includes/language.php';
 require_once COOKBOOK_HOOK_GUIDE_DIR . 'includes/hooks.php';
 require_once COOKBOOK_HOOK_GUIDE_DIR . 'includes/scripts.php';
 
