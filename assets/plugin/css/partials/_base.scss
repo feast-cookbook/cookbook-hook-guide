@@ -1,7 +1,9 @@
-.cookbook-hook-guide {
+.cookbook-hook {
 	border: 1px solid $teal;
 	font-family: Consolas, Monaco, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+	margin: 15px 0;
 	padding: 15px;
+	text-align: left;
 
 	.cookbook-hook-name {
 		color: $teal;
@@ -9,7 +11,7 @@
 
 	.cookbook-hook-callbacks {
 		margin: 0;
-		padding: 10px;
+		padding: 10px 10px 5px;
 
 		li {
 			background: transparentize( $teal, 0.8 );
@@ -25,4 +27,29 @@
 			float: right;
 		}
 	}
+}
+
+.cookbook-recipe-top-hook {
+	margin-top: 0;
+}
+
+.cookbook-recipe-bottom-hook {
+	margin-bottom: 0;
+}
+
+.cookbook-extras {
+	float: none !important;
+	max-width: 100% !important;
+}
+
+.cookbook-recipe-print-body {
+	* {
+		box-sizing: border-box;
+	}
+
+	padding-top: 0 !important;
+}
+
+.cookbook-no-print-preview-bar {
+	position: relative !important;
 }
