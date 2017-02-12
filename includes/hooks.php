@@ -53,74 +53,30 @@ function cookbook_hook_guide_get_callbacks( $hook, $unset = false ) {
 }
 
 /**
- * Output the hook info.
+ * Output hook info.
  *
  * @since  1.0.0
  * @access public
  * @return void
  */
 function cookbook_hook_guide_hook_info() {
-	$hook = current_filter();
+	$hook        = current_filter();
 	$dashed_hook = str_replace( '_', '-', $hook );
-	?>
-	<div id="<?php echo esc_attr( $dashed_hook ); ?>-hook" class="cookbook-hook <?php echo esc_attr( $dashed_hook ); ?>-hook">
-		<h3 class="cookbook-hook-name">
-			<?php echo esc_attr( $hook ); ?>
-		</h3>
-
-		<?php $callbacks = cookbook_hook_guide_get_callbacks( $hook, __FUNCTION__ ); ?>
-
-		<?php if ( ! empty( $callbacks ) ) : ?>
-
-			<ul class="cookbook-hook-callbacks">
-				<?php foreach ( $callbacks as $priority => $callback ) : ?>
-						<?php if ( false !== stripos( $callback, 'cookbook_recipe' ) ) : ?>
-							<li class="nested-hook-callback">
-								<?php cookbook_hook_guide_nested_hook_info( $callback, $priority ); ?>
-							</li>
-						<?php else : ?>
-							<li class="callback">
-								<span class="function"><?php echo esc_html( $callback ); ?></span> <span class="priority"><?php echo esc_html( $priority ); ?></span>
-							</li>
-						<?php endif; ?>
-				<?php endforeach; ?>
-			</ul>
-
-		<?php endif; ?>
-
-	</div>
-	<?php
+	$callbacks   = cookbook_hook_guide_get_callbacks( $hook, __FUNCTION__ );
+	require COOKBOOK_HOOK_GUIDE_DIR . 'templates/hook-info.php';
 }
 
 /**
- * Output the hook info.
+ * Output nested hook info.
  *
  * @since  1.0.0
  * @access public
+ * @param  string $hook The hook to be used when displaying info.
+ * @param  int    $priority The priority used when hooking the hook.
  * @return void
  */
 function cookbook_hook_guide_nested_hook_info( $hook, $priority ) {
 	$dashed_hook = str_replace( '_', '-', $hook );
-	?>
-	<div id="<?php echo esc_attr( $dashed_hook ); ?>-hook" class="cookbook-nested-hook <?php echo esc_attr( $dashed_hook ); ?>-hook">
-		<h4 class="cookbook-nested-hook-name">
-			<span class="function"><?php echo esc_html( $hook ); ?></span> <span class="priority"><?php echo esc_html( $priority ); ?></span>
-		</h4>
-
-		<?php $callbacks = cookbook_hook_guide_get_callbacks( $hook ); ?>
-
-		<?php if ( ! empty( $callbacks ) ) : ?>
-
-			<ul class="cookbook-nested-hook-callbacks">
-				<?php foreach ( $callbacks as $priority => $callback ) : ?>
-					<li class="callback">
-						<span class="function"><?php echo esc_html( $callback ); ?></span> <span class="priority"><?php echo esc_html( $priority ); ?></span>
-					</li>
-				<?php endforeach; ?>
-			</ul>
-
-		<?php endif; ?>
-
-	</div>
-	<?php
+	$callbacks   = cookbook_hook_guide_get_callbacks( $hook );
+	require COOKBOOK_HOOK_GUIDE_DIR . 'templates/hook-info-nested.php';
 }
