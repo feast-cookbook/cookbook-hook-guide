@@ -28,27 +28,6 @@ function cookbook_hook_guide_get_suffix() {
 }
 
 /**
- * Helper function to determine whether or not to load a packed version of
- * our JavaScript libraries on the front end.
- *
- * Developers can filter cookbook_hook_guide_enable_packed_js to false if they
- * are loading any of the following libraries in their theme or plugin:
- *
- * @since  1.0.0
- * @access protected
- * @return bool
- */
-function _cookbook_hook_guide_enable_packed_js() {
-	$suffix = cookbook_hook_guide_get_suffix();
-
-	if ( empty( $suffix ) ) {
-		return false;
-	}
-
-	return (bool) apply_filters( 'cookbook_hook_guide_enable_packed_js', true );
-}
-
-/**
  * Load all required CSS files on the front end.
  *
  * Developers can disable our CSS by filtering cookbook_hook_guide_load_css to
@@ -70,32 +49,6 @@ function cookbook_hook_guide_load_css() {
 		COOKBOOK_HOOK_GUIDE_URI . "css/cookbook-hook-guide{$suffix}.css",
 		array(),
 		COOKBOOK_HOOK_GUIDE_VERSION
-	);
-}
-
-/**
- * Load all required JavaScript files on the front end.
- *
- * Developers can disable our JS by filtering cookbook_hook_guide_load_js to
- * false within their theme or plugin.
- *
- * @since  1.0.0
- * @access public
- * @return void
- */
-function cookbook_hook_guide_load_js() {
-	if ( ! apply_filters( 'cookbook_hook_guide_load_js', true ) ) {
-		return;
-	}
-
-	$suffix = cookbook_hook_guide_get_suffix();
-
-	wp_enqueue_script(
-		'cookbook-hook-guide',
-		COOKBOOK_HOOK_GUIDE_URI . "js/cookbookHookGuide{$suffix}.js",
-		array( 'jquery' ),
-		COOKBOOK_HOOK_GUIDE_VERSION,
-		true
 	);
 }
 
