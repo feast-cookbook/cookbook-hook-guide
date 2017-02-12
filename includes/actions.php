@@ -50,20 +50,6 @@ add_action( 'cookbook_recipe_top', 'cookbook_hook_guide_hook_info', 0 );
  *
  * @see cookbook_hook_guide_hook_info
  */
-add_action( 'cookbook_recipe_extras', 'cookbook_hook_guide_hook_info', 0 );
-
-/**
- * Callback defined in includes/hooks.php
- *
- * @see cookbook_hook_guide_hook_info
- */
-add_action( 'cookbook_recipe_time', 'cookbook_hook_guide_hook_info', 0 );
-
-/**
- * Callback defined in includes/hooks.php
- *
- * @see cookbook_hook_guide_hook_info
- */
 add_action( 'cookbook_recipe_content', 'cookbook_hook_guide_hook_info', 0 );
 
 /**
@@ -71,63 +57,7 @@ add_action( 'cookbook_recipe_content', 'cookbook_hook_guide_hook_info', 0 );
  *
  * @see cookbook_hook_guide_hook_info
  */
-add_action( 'cookbook_recipe_ingredients', 'cookbook_hook_guide_hook_info', 0 );
-
-/**
- * Callback defined in includes/hooks.php
- *
- * @see cookbook_hook_guide_hook_info
- */
-add_action( 'cookbook_recipe_instructions', 'cookbook_hook_guide_hook_info', 0 );
-
-/**
- * Callback defined in includes/hooks.php
- *
- * @see cookbook_hook_guide_hook_info
- */
-add_action( 'cookbook_recipe_notes', 'cookbook_hook_guide_hook_info', 0 );
-
-/**
- * Callback defined in includes/hooks.php
- *
- * @see cookbook_hook_guide_hook_info
- */
 add_action( 'cookbook_recipe_bottom', 'cookbook_hook_guide_hook_info', 0 );
-
-/**
- * Callback defined in includes/hooks.php
- *
- * @see cookbook_hook_guide_hook_info
- */
-add_action( 'cookbook_recipe_nutrition', 'cookbook_hook_guide_hook_info', 0 );
-
-/**
- * Callback defined in includes/hooks.php
- *
- * @see cookbook_hook_guide_hook_info
- */
-add_action( 'cookbook_recipe_nutrition_header', 'cookbook_hook_guide_hook_info', 0 );
-
-/**
- * Callback defined in includes/hooks.php
- *
- * @see cookbook_hook_guide_hook_info
- */
-add_action( 'cookbook_recipe_nutrition_table', 'cookbook_hook_guide_hook_info', 0 );
-
-/**
- * Callback defined in includes/hooks.php
- *
- * @see cookbook_hook_guide_hook_info
- */
-add_action( 'cookbook_recipe_nutrition_table_head', 'cookbook_hook_guide_hook_info', 0 );
-
-/**
- * Callback defined in includes/hooks.php
- *
- * @see cookbook_hook_guide_hook_info
- */
-add_action( 'cookbook_recipe_nutrition_table_body', 'cookbook_hook_guide_hook_info', 0 );
 
 /**
  * Callback defined in includes/hooks.php
@@ -149,13 +79,6 @@ add_action( 'cookbook_recipe_print_head', 'cookbook_hook_guide_hook_info', 0 );
  * @see cookbook_hook_guide_hook_info
  */
 add_action( 'cookbook_recipe_print_before', 'cookbook_hook_guide_hook_info', 0 );
-
-/**
- * Callback defined in includes/hooks.php
- *
- * @see cookbook_hook_guide_hook_info
- */
-add_action( 'cookbook_recipe_print_preview_bar', 'cookbook_hook_guide_hook_info', 0 );
 
 /**
  * Callback defined in includes/hooks.php
