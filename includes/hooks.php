@@ -31,19 +31,25 @@ function cookbook_hook_guide_get_callbacks( $hook, $unset = false ) {
 		$callbacks = $callbacks->callbacks;
 	}
 
-	if ( $unset ) {
-		foreach ( $callbacks as $priority => $groups ) {
+	$formatted = array();
+
+	foreach ( $callbacks as $priority => $groups ) {
+		if ( $unset ) {
 			unset( $groups[ $unset ] );
 
 			$callbacks[ $priority ] = $groups;
+		}
 
-			if ( empty( $callbacks[ $priority ] ) ) {
-				unset( $callbacks[ $priority ] );
-			}
+		if ( empty( $callbacks[ $priority ] ) ) {
+			unset( $callbacks[ $priority ] );
+		}
+
+		foreach ( $groups as $callback => $args ) {
+			$formatted[ $priority ] = $callback;
 		}
 	}
 
-	return $callbacks;
+	return $formatted;
 }
 
 /**
@@ -55,24 +61,22 @@ function cookbook_hook_guide_get_callbacks( $hook, $unset = false ) {
  */
 function cookbook_hook_guide_hook_info() {
 	$hook = current_filter();
-
-	$callbacks = cookbook_hook_guide_get_callbacks( $hook, __FUNCTION__ );
+	$dashed_hook = str_replace( '_', '-', $hook );
 	?>
-	<div class="cookbook-hook-guide">
+	<div id="<?php echo esc_attr( $dashed_hook ); ?>-hook" class="cookbook-hook <?php echo esc_attr( $dashed_hook ); ?>-hook">
 		<h3 class="cookbook-hook-name">
-			<?php echo $hook; ?>
+			<?php echo esc_attr( $hook ); ?>
 		</h3>
 
-		<?php if ( ! empty( $callbacks ) ): ?>
+		<?php $callbacks = cookbook_hook_guide_get_callbacks( $hook, __FUNCTION__ ); ?>
+
+		<?php if ( ! empty( $callbacks ) ) : ?>
 
 			<ul class="cookbook-hook-callbacks">
-				<?php foreach ( $callbacks as $priority => $args ) : ?>
-					<?php foreach ( $args as $callback => $args ) : ?>
-						<li>
-							<span class="function"><?php echo $args['function']; ?></span> <span class="priority"><?php echo $priority; ?></span>
-
-						</li>
-					<?php endforeach; ?>
+				<?php foreach ( $callbacks as $priority => $callback ) : ?>
+					<li>
+						<span class="function"><?php echo esc_html( $callback ); ?></span> <span class="priority"><?php echo esc_html( $priority ); ?></span>
+					</li>
 				<?php endforeach; ?>
 			</ul>
 
