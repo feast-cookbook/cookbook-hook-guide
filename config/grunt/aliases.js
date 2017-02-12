@@ -21,7 +21,6 @@ module.exports = function() {
 			'build:dependencies:css',
 			'newer:sass',
 			'newer:postcss',
-			'newer:rtlcss',
 			'newer:cssmin',
 			'newer:copy:css'
 		],
