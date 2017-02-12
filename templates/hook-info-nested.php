@@ -1,6 +1,6 @@
 <?php
 /**
- * Display markup for info about a top-level template hook.
+ * Display markup for info about a nested template hook.
  *
  * @package   CookbookHookGuide\Templates
  * @copyright Copyright (c) 2016, WP Site Care
