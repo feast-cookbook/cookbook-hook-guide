@@ -19,12 +19,12 @@
   color: #1c1e1f;
   font-weight: normal;
   line-height: 1.2;
-  margin: 0 0 10px;
+  margin: 0;
 }
 
 .cookbook-hook .cookbook-hook-callbacks {
-  margin: 0;
-  padding: 10px 10px 5px;
+  margin: 15px 0 0;
+  padding: 0;
 }
 
 .cookbook-hook .cookbook-hook-callbacks li {
@@ -32,22 +32,26 @@
   display: block;
   list-style-type: none;
   margin-bottom: 5px;
-  padding: 5px;
+  padding: 10px;
   position: relative;
   z-index: 9999;
 }
 
 .cookbook-hook .cookbook-hook-callbacks .nested-hook-callback {
-  border: 1px solid #2dbdb6;
+  padding: 0;
 }
 
 .cookbook-hook .cookbook-hook-callbacks .priority {
   float: right;
 }
 
-.cookbook-nested-hook .cookbook-nested-hook-name {
-  color: #1c1e1f;
-  margin-bottom: 5px;
+.cookbook-nested-hook {
+  border: 1px solid #2dbdb6;
+  padding: 10px;
+}
+
+.cookbook-nested-hook .cookbook-hook-name {
+  padding: 5px;
 }
 
 .cookbook-nested-hook .cookbook-nested-hook-callbacks {

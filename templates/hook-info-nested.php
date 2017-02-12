@@ -11,7 +11,7 @@
 ?>
 <div id="<?php echo esc_attr( $dashed_hook ); ?>-hook" class="cookbook-nested-hook <?php echo esc_attr( $dashed_hook ); ?>-hook">
 
-	<h4 class="cookbook-nested-hook-name">
+	<h4 class="cookbook-hook-name">
 		<span class="function"><?php echo esc_html( $hook ); ?></span> <span class="priority"><?php echo esc_html( $priority ); ?></span>
 	</h4>
 
