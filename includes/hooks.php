@@ -53,36 +53,6 @@ function cookbook_hook_guide_get_callbacks( $hook, $unset = false ) {
 }
 
 /**
- * Output hook info.
- *
- * @since  1.0.0
- * @access public
- * @return void
- */
-function cookbook_hook_guide_hook_info() {
-	$hook        = current_filter();
-	$dashed_hook = str_replace( '_', '-', $hook );
-	$callbacks   = cookbook_hook_guide_get_callbacks( $hook, __FUNCTION__ );
-	require COOKBOOK_HOOK_GUIDE_DIR . 'templates/hook-info.php';
-}
-
-/**
- * Output nested hook info.
- *
- * @since  1.0.0
- * @access public
- * @param  string $hook The hook to be used when displaying info.
- * @param  int    $priority The priority used when hooking the hook.
- * @param  string $parent The parent hook to be used when displaying info.
- * @return void
- */
-function cookbook_hook_guide_nested_hook_info( $hook, $priority, $parent ) {
-	$dashed_hook = str_replace( '_', '-', $hook );
-	$callbacks   = cookbook_hook_guide_get_callbacks( $hook );
-	require COOKBOOK_HOOK_GUIDE_DIR . 'templates/hook-info-nested.php';
-}
-
-/**
  * Format and escape HTML for an example code callback function.
  *
  * The encoded character wrapping the callback is a single quote.
@@ -114,4 +84,34 @@ function cookbook_hook_guide_example_remove( $hook, $callback, $priority ) {
 	);
 
 	echo '<code class="cookbook-hook-example-code">' . $action . '</code>';
+}
+
+/**
+ * Output hook info.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+function cookbook_hook_guide_hook_info() {
+	$hook        = current_filter();
+	$dashed_hook = str_replace( '_', '-', $hook );
+	$callbacks   = cookbook_hook_guide_get_callbacks( $hook, __FUNCTION__ );
+	require COOKBOOK_HOOK_GUIDE_DIR . 'templates/hook-info.php';
+}
+
+/**
+ * Output nested hook info.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  string $hook The hook to be used when displaying info.
+ * @param  int    $priority The priority used when hooking the hook.
+ * @param  string $parent The parent hook to be used when displaying info.
+ * @return void
+ */
+function cookbook_hook_guide_nested_hook_info( $hook, $priority, $parent ) {
+	$dashed_hook = str_replace( '_', '-', $hook );
+	$callbacks   = cookbook_hook_guide_get_callbacks( $hook );
+	require COOKBOOK_HOOK_GUIDE_DIR . 'templates/hook-info-nested.php';
 }
