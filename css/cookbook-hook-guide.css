@@ -5,7 +5,10 @@
  * License:     MIT
  */
 .cookbook-hook {
+  background: #fff;
   border: 1px solid #2dbdb6;
+  clear: both;
+  color: #1c1e1f;
   font-family: Consolas, Monaco, 'Andale Mono', 'DejaVu Sans Mono', monospace;
   margin: 15px 0;
   padding: 15px;
@@ -13,7 +16,10 @@
 }
 
 .cookbook-hook .cookbook-hook-name {
-  color: #2dbdb6;
+  color: #1c1e1f;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0 0 10px;
 }
 
 .cookbook-hook .cookbook-hook-callbacks {
@@ -31,8 +37,26 @@
   z-index: 9999;
 }
 
+.cookbook-hook .cookbook-hook-callbacks .nested-hook-callback {
+  border: 1px solid #2dbdb6;
+}
+
 .cookbook-hook .cookbook-hook-callbacks .priority {
   float: right;
+}
+
+.cookbook-nested-hook .cookbook-nested-hook-name {
+  color: #1c1e1f;
+  margin-bottom: 5px;
+}
+
+.cookbook-nested-hook .cookbook-nested-hook-callbacks {
+  margin: 10px;
+  padding: 0;
+}
+
+.cookbook-nested-hook .cookbook-nested-hook-callbacks li:last-of-type {
+  margin-bottom: 0;
 }
 
 .cookbook-recipe-top-hook {
@@ -41,11 +65,6 @@
 
 .cookbook-recipe-bottom-hook {
   margin-bottom: 0;
-}
-
-.cookbook-extras {
-  float: none !important;
-  max-width: 100% !important;
 }
 
 .cookbook-recipe-print-body {
