@@ -26,7 +26,6 @@
 			margin-bottom: 5px;
 			padding: 10px;
 			position: relative;
-			z-index: 9999;
 		}
 
 		.nested-hook-callback {
@@ -37,6 +36,38 @@
 			float: right;
 		}
 	}
+
+	.cookbook-hook-example-code {
+		background: $slate-dark;
+		color: $teal;
+		display: none;
+		left: 0;
+		padding: 10px;
+		position: absolute;
+		white-space: nowrap;
+		width: auto;
+		z-index: 1000;
+
+		&:hover,
+		&:focus {
+			display: block;
+		}
+
+		.out {
+			color: $white;
+		}
+
+		.num {
+			color: $satsuma;
+		}
+	}
+
+	.callback:hover,
+	.callback:focus {
+		.cookbook-hook-example-code {
+			display: block;
+		}
+	}
 }
 
 .cookbook-nested-hook {
@@ -45,6 +76,14 @@
 
 	.cookbook-hook-name {
 		padding: 5px;
+		position: relative;
+
+		&:hover,
+		&:focus {
+			.cookbook-hook-example-code {
+				display: block;
+			}
+		}
 	}
 
 	.cookbook-nested-hook-callbacks {

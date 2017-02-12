@@ -34,7 +34,6 @@
   margin-bottom: 5px;
   padding: 10px;
   position: relative;
-  z-index: 9999;
 }
 
 .cookbook-hook .cookbook-hook-callbacks .nested-hook-callback {
@@ -45,6 +44,35 @@
   float: right;
 }
 
+.cookbook-hook .cookbook-hook-example-code {
+  background: #2c3237;
+  color: #2dbdb6;
+  display: none;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  white-space: nowrap;
+  width: auto;
+  z-index: 1000;
+}
+
+.cookbook-hook .cookbook-hook-example-code:hover, .cookbook-hook .cookbook-hook-example-code:focus {
+  display: block;
+}
+
+.cookbook-hook .cookbook-hook-example-code .out {
+  color: #fff;
+}
+
+.cookbook-hook .cookbook-hook-example-code .num {
+  color: #f7b346;
+}
+
+.cookbook-hook .callback:hover .cookbook-hook-example-code,
+.cookbook-hook .callback:focus .cookbook-hook-example-code {
+  display: block;
+}
+
 .cookbook-nested-hook {
   border: 1px solid #2dbdb6;
   padding: 10px;
@@ -52,6 +80,11 @@
 
 .cookbook-nested-hook .cookbook-hook-name {
   padding: 5px;
+  position: relative;
+}
+
+.cookbook-nested-hook .cookbook-hook-name:hover .cookbook-hook-example-code, .cookbook-nested-hook .cookbook-hook-name:focus .cookbook-hook-example-code {
+  display: block;
 }
 
 .cookbook-nested-hook .cookbook-nested-hook-callbacks {

@@ -73,10 +73,45 @@ function cookbook_hook_guide_hook_info() {
  * @access public
  * @param  string $hook The hook to be used when displaying info.
  * @param  int    $priority The priority used when hooking the hook.
+ * @param  string $parent The parent hook to be used when displaying info.
  * @return void
  */
-function cookbook_hook_guide_nested_hook_info( $hook, $priority ) {
+function cookbook_hook_guide_nested_hook_info( $hook, $priority, $parent ) {
 	$dashed_hook = str_replace( '_', '-', $hook );
 	$callbacks   = cookbook_hook_guide_get_callbacks( $hook );
 	require COOKBOOK_HOOK_GUIDE_DIR . 'templates/hook-info-nested.php';
+}
+
+/**
+ * Format and escape HTML for an example code callback function.
+ *
+ * The encoded character wrapping the callback is a single quote.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  string $callback The callback to be formatted.
+ * @return string
+ */
+function cookbook_hook_guide_format_example_callback( $callback ) {
+	return '&#39;' . esc_html( $callback ) . '&#39;<span class="out">,</span>';
+}
+
+/**
+ * Display example code for a removing a given callback from a given hook.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  string $hook The hook to be used when displaying example code.
+ * @param  string $callback The callback hook to be used when displaying example code.
+ * @param  int    $priority The priority used when hooking the hook.
+ * @return void
+ */
+function cookbook_hook_guide_example_remove( $hook, $callback, $priority ) {
+	$action = sprintf( '<span class="out">remove_action(</span> %s %s <span class="num">%s</span> <span class="out">);</span>',
+		cookbook_hook_guide_format_example_callback( $hook ),
+		cookbook_hook_guide_format_example_callback( $callback ),
+		absint( $priority )
+	);
+
+	echo '<code class="cookbook-hook-example-code">' . $action . '</code>';
 }
