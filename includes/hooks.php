@@ -94,9 +94,10 @@ function cookbook_hook_guide_example_remove( $hook, $callback, $priority ) {
  * @return void
  */
 function cookbook_hook_guide_hook_info() {
-	$hook        = current_filter();
-	$dashed_hook = str_replace( '_', '-', $hook );
-	$callbacks   = cookbook_hook_guide_get_callbacks( $hook, __FUNCTION__ );
+	$hook       = current_filter();
+	$callbacks  = cookbook_hook_guide_get_callbacks( $hook, __FUNCTION__ );
+	$hook_id    = str_replace( '_', '-', $hook ) . '-hook';
+	$hook_class = 'cookbook-hook';
 	require COOKBOOK_HOOK_GUIDE_DIR . 'templates/hook-info.php';
 }
 
@@ -111,7 +112,8 @@ function cookbook_hook_guide_hook_info() {
  * @return void
  */
 function cookbook_hook_guide_nested_hook_info( $hook, $priority, $parent ) {
-	$dashed_hook = str_replace( '_', '-', $hook );
-	$callbacks   = cookbook_hook_guide_get_callbacks( $hook );
-	require COOKBOOK_HOOK_GUIDE_DIR . 'templates/hook-info-nested.php';
+	$callbacks  = cookbook_hook_guide_get_callbacks( $hook );
+	$hook_id    = str_replace( '_', '-', $hook ) . '-hook';
+	$hook_class = 'cookbook-nested-hook';
+	require COOKBOOK_HOOK_GUIDE_DIR . 'templates/hook-info.php';
 }
