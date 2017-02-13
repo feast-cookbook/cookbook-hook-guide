@@ -20,10 +20,16 @@
 
 		<ul class="cookbook-nested-hook-callbacks">
 			<?php foreach ( $callbacks as $priority => $callback ) : ?>
-				<li class="callback">
-					<span class="function"><?php echo esc_html( $callback ); ?></span>
-					<?php cookbook_hook_guide_example_remove( $hook, $callback, $priority ); ?>
-				</li>
+				<?php if ( false !== stripos( $callback, 'cookbook_recipe' ) ) : ?>
+					<li class="nested-hook-callback">
+						<?php cookbook_hook_guide_nested_hook_info( $callback, $priority, $hook ); ?>
+					</li>
+				<?php else : ?>
+					<li class="callback">
+						<span class="function"><?php echo esc_html( $callback ); ?></span>
+						<?php cookbook_hook_guide_example_remove( $hook, $callback, $priority ); ?>
+					</li>
+				<?php endif; ?>
 			<?php endforeach; ?>
 		</ul>
 
