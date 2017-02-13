@@ -25,6 +25,9 @@ If you'd like to submit code patches or contribute in any other way, please fork
 
 == Screenshots ==
 
+1. Cookbook Recipe View with Hook Guide Enabled.
+2. Cookbook Print Preview with Hook Guide Enabled.
+
 == Changelog ==
 
 = 1.0.0 =
