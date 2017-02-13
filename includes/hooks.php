@@ -83,7 +83,7 @@ function cookbook_hook_guide_example_remove( $hook, $callback, $priority ) {
 		absint( $priority )
 	);
 
-	echo '<code class="cookbook-hook-example-code">' . $action . '</code>';
+	echo '<code tabindex="0" class="cookbook-hook-example-code">' . $action . '</code>';
 }
 
 /**

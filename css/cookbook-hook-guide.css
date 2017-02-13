@@ -100,7 +100,7 @@
   margin-bottom: 0;
 }
 
-.cookbook-hook .cookbook-hook-example-code:hover, .cookbook-hook .cookbook-hook-example-code:focus, .cookbook-hook .callback:hover .cookbook-hook-example-code,
+.cookbook-hook .cookbook-hook-example-code:hover, .cookbook-hook .cookbook-hook-example-code:focus, .cookbook-hook .cookbook-hook-example-code:active, .cookbook-hook .callback:hover .cookbook-hook-example-code,
 .cookbook-hook .callback:focus .cookbook-hook-example-code, .cookbook-nested-hook .cookbook-hook-name:hover .cookbook-hook-example-code, .cookbook-nested-hook .cookbook-hook-name:focus .cookbook-hook-example-code {
   -webkit-animation: fadeIn 0.5s;
           animation: fadeIn 0.5s;

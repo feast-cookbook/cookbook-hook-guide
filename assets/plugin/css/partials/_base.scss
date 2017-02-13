@@ -60,7 +60,8 @@
 		z-index: 1000;
 
 		&:hover,
-		&:focus {
+		&:focus,
+		&:active {
 			@extend %unhide;
 		}
 
