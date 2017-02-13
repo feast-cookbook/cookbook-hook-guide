@@ -9,7 +9,7 @@ __License:__ [MIT](http://wpsitecare.mit-license.org/)
 
 ## Description ##
 
-![Recipe View](https://cloud.githubusercontent.com/assets/2184093/22858942/ead6aa8e-f09a-11e6-8d8f-901daa340f88.jpg)
+<img alt="Cookbook hook guide" style="display:block; margin: 0 auto 20px;" src="https://cloud.githubusercontent.com/assets/2184093/22871073/86f5480e-f17b-11e6-9e43-391ca8e63db7.gif" />
 
 If you're using Cookbook as your WordPress recipe plugin, you may or may not already know that the entire template can be customized using small code snippets. This visual hook guide plugin is a helper that will give you a visual frame of reference for all of the template hooks available in Cookbook.
 
@@ -18,5 +18,3 @@ When you install and activate the plugin, a visual representation of the templat
 If you hover a particular hook, you'll see an example code snippet to remove that callback function from your template. In order to use the snippet, you would paste it into your theme's functions.php file or a template you're using to display the post where your recipes are embedded.
 
 We recommend using this plugin on a staging site or local development environment as a way to make it easier for you to customize your Cookbook recipes. That said, it should be safe to use on a live website, but please be careful making template changes without backing things up first.
-
-![Print View](https://cloud.githubusercontent.com/assets/2184093/22858943/ead9b558-f09a-11e6-8905-42656b3aba88.jpg)
