@@ -7,9 +7,9 @@ __Requires:__ WordPress 4.4
 __Tested up to:__ WordPress 4.7.2  
 __License:__ [MIT](http://wpsitecare.mit-license.org/)  
 
-## Description ##
-
 ![Recipe View](https://cloud.githubusercontent.com/assets/2184093/22871046/4078ecfa-f17b-11e6-96b1-fb5201ed00e4.jpg)
+
+## Description ##
 
 If you're using Cookbook as your WordPress recipe plugin, you may or may not already know that the entire template can be customized using small code snippets. This visual hook guide plugin is a helper that will give you a visual frame of reference for all of the template hooks available in Cookbook.
 
